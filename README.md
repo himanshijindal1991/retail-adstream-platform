@@ -17,7 +17,9 @@ The platform captures customer interactions, processes advertising events, and p
 
 ## 2. High-Level Architecture
 
-![High-Level Architecture](docs/HLD Real Time Retail Advertising Analytics Platform.png)
+
+![High-Level Architecture](insights-api/docs/HLD%20Real%20Time%20Retail%20Advertising%20Analytics%20Platform.png)
+
 
 **Interactive Architecture Diagram:** [View in Excalidraw](https://excalidraw.com/#json=is2KS1DHUmoRiu9BU8zgO,cRjW5l8Kz5v2Tb7uexFYjA)
 
