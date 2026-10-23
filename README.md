@@ -93,4 +93,4 @@ In production, tenant identity must be derived from authenticated credentials.
 
 This implementation demonstrates the Insights API only. Kafka, Flink, Redis, reconciliation, and the production deployment are proposed architecture components rather than implemented services.
 
-The sample metrics represent predefined cumulative reporting windows. Arbitrary historical date-range queries and exact distinct-customer aggregation across windows are not implemented.
+The sample metrics represent predefined cumulative reporting windows. Arbitrary historical date-range queries and exact distinct-customer aggregation across windows are not implemented....
