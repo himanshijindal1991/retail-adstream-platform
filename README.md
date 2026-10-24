@@ -12,7 +12,7 @@ Retail AdStream is a **proposed** event-driven analytics platform for retail adv
 
 ![High-Level Architecture](docs/high-level-architecture.png)
 
-[View editable architecture in Excalidraw](https://excalidraw.com/#json=is2KS1DHUmoRiu9BU8zgO,cRjW5l8Kz5v2Tb7uexFYjA)
+[View editable architecture in Excalidraw](https://excalidraw.com/#json=2pLpqTS9iNt8ho6fZK5N7,rTiQDazrFnO0B942HJy5ag)
 
 Retail AdStream uses an event-driven architecture to capture retail advertising interactions and provide near-real-time campaign insights.
 
