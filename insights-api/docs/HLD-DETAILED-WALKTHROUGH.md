@@ -249,7 +249,7 @@ Historical requests would read indexed pre-aggregates from PostgreSQL, avoiding 
 
 ## 11. S3-compatible object storage and reconciliation
 
-**Object storage** (for example S3 or MinIO) has two separate roles:
+**Object storage** (for example S3) has two separate roles:
 
 - **Raw event archive:** A Kafka sink/archival consumer writes event data for long-term retention, audit, backfill, and replay.
 - **Flink checkpoints:** Flink stores recoverable processing state independently of the raw event archive.

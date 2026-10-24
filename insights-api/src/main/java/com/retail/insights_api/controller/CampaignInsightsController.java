@@ -5,8 +5,11 @@ import com.retail.insights_api.service.CampaignInsightsService;
 import com.retail.insights_api.config.TenantAccess;
 import org.springframework.web.bind.annotation.*;
 import java.util.Map;
+import jakarta.validation.constraints.Pattern;
+import org.springframework.validation.annotation.Validated;
 
 @RestController
+@Validated
 @RequestMapping("/ad")
 public class CampaignInsightsController {
 
@@ -21,7 +24,7 @@ public class CampaignInsightsController {
 
     @GetMapping("/{campaignId}/clicks")
     public Map<String, Object> getClicks(
-            @PathVariable String campaignId,
+            @PathVariable @Pattern(regexp = "[A-Za-z0-9_-]{1,64}", message = "Invalid campaign ID") String campaignId,
             @RequestHeader("X-Tenant-Id") String tenantId) {
 
         tenantAccess.check(tenantId);
@@ -34,7 +37,7 @@ public class CampaignInsightsController {
 
     @GetMapping("/{campaignId}/impressions")
     public Map<String, Object> getImpressions(
-            @PathVariable String campaignId,
+            @PathVariable @Pattern(regexp = "[A-Za-z0-9_-]{1,64}", message = "Invalid campaign ID") String campaignId,
             @RequestHeader("X-Tenant-Id") String tenantId) {
 
         tenantAccess.check(tenantId);
@@ -47,7 +50,7 @@ public class CampaignInsightsController {
 
     @GetMapping("/{campaignId}/clickToBasket")
     public Map<String, Object> getClickToBasket(
-            @PathVariable String campaignId,
+            @PathVariable @Pattern(regexp = "[A-Za-z0-9_-]{1,64}", message = "Invalid campaign ID") String campaignId,
             @RequestHeader("X-Tenant-Id") String tenantId) {
 
         tenantAccess.check(tenantId);
