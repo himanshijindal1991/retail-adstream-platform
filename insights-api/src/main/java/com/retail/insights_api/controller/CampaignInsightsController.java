@@ -2,6 +2,7 @@
 package com.retail.insights_api.controller;
 
 import com.retail.insights_api.service.CampaignInsightsService;
+import com.retail.insights_api.config.TenantAccess;
 import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
@@ -10,10 +11,12 @@ import java.util.Map;
 public class CampaignInsightsController {
 
     private final CampaignInsightsService service;
+    private final TenantAccess tenantAccess;
 
     public CampaignInsightsController(
-            CampaignInsightsService service) {
+            CampaignInsightsService service, TenantAccess tenantAccess) {
         this.service = service;
+        this.tenantAccess = tenantAccess;
     }
 
     @GetMapping("/{campaignId}/clicks")
@@ -21,6 +24,7 @@ public class CampaignInsightsController {
             @PathVariable String campaignId,
             @RequestHeader("X-Tenant-Id") String tenantId) {
 
+        tenantAccess.check(tenantId);
         return Map.of(
             "campaignId", campaignId,
             "tenantId", tenantId,
@@ -33,6 +37,7 @@ public class CampaignInsightsController {
             @PathVariable String campaignId,
             @RequestHeader("X-Tenant-Id") String tenantId) {
 
+        tenantAccess.check(tenantId);
         return Map.of(
             "campaignId", campaignId,
             "tenantId", tenantId,
@@ -45,6 +50,7 @@ public class CampaignInsightsController {
             @PathVariable String campaignId,
             @RequestHeader("X-Tenant-Id") String tenantId) {
 
+        tenantAccess.check(tenantId);
         return Map.of(
             "campaignId", campaignId,
             "tenantId", tenantId,
